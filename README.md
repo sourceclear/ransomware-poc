@@ -1,2 +1,2 @@
 # ransomware-poc
-A poc to demonstrate how ransomware that can spread to enterprise apps through libraries
+A poc to demonstrate how ransomware can spread to enterprise apps through libraries
