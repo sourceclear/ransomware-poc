@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.evil</groupId>
-    <artifactId>dbransome</artifactId>
+    <artifactId>ransomware</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
