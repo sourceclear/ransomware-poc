@@ -1,4 +1,4 @@
-package com.evil.dbransome;
+package com.evil.ransomware;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

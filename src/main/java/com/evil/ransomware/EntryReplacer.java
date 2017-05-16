@@ -1,6 +1,4 @@
-package com.evil.dbransome;
-
-import java.io.File;
+package com.evil.ransomware;
 
 public class EntryReplacer {
 

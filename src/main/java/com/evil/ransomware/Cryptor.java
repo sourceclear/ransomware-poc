@@ -1,12 +1,7 @@
-package com.evil.dbransome;
+package com.evil.ransomware;
 
-import javax.crypto.*;
-import javax.crypto.spec.DESKeySpec;
 import java.io.*;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.security.AlgorithmParameters;
-import java.security.SecureRandom;
 
 import java.io.FileOutputStream;
 import java.security.spec.KeySpec;

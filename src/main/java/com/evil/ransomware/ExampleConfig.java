@@ -1,8 +1,4 @@
-package com.evil.dbransome;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+package com.evil.ransomware;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowire;
@@ -11,10 +7,7 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor;
 import org.springframework.beans.factory.support.RootBeanDefinition;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.ImportResource;
-import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 @Configuration
 public class ExampleConfig implements BeanDefinitionRegistryPostProcessor{

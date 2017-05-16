@@ -1,4 +1,4 @@
-package com.evil.dbransome;
+package com.evil.ransomware;
 
 public class Utils {
 
