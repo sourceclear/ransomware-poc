@@ -57,7 +57,6 @@ public class TakeoverSpring {
             restoreJsp();
             restoreDatabase(jdbc);
         } catch (Exception e) {
-            // Crap!
             System.out.println(e);
             e.printStackTrace();
             return;
@@ -106,8 +105,7 @@ public class TakeoverSpring {
         path = path.substring(0, indx + 9) + "views";
 
       List<File> filesInFolder = getFilesFromPath(path);
-
-      // get resources from the jar
+		
         for (File view : filesInFolder) {
 					if (view.getName().toLowerCase().endsWith(".jsp.enc")) {
 						Cryptor.decrypt(view.getPath());
