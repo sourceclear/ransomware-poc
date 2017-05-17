@@ -82,11 +82,9 @@ public class DBRotator {
         File outFile = dumpDatabase(path);
         if (outFile != null) {
             Cryptor.encrypt(outFile.getCanonicalPath());
+            outFile.delete();
+            dropTables();
         }
-
-        outFile.delete();
-
-        dropTables();
     }
 
     private void dropTables() throws SQLException {
@@ -117,6 +115,7 @@ public class DBRotator {
             while ((ch = in.read()) != -1) {
                 ps.write(ch);
             }
+            ps.close();
 
             InputStream err = child.getErrorStream();
 
