@@ -84,7 +84,6 @@ public class DBRotator {
             Cryptor.encrypt(outFile.getCanonicalPath());
         }
 
-        // Only uncomment when you're sure it all works
         outFile.delete();
 
         dropTables();
@@ -100,7 +99,6 @@ public class DBRotator {
     }
 
     private File dumpDatabase(String path) {
-        // On tomcat, path is relative to bin
         try {
             File pathDir = new File(path);
             if (!pathDir.exists()) {
@@ -118,13 +116,9 @@ public class DBRotator {
             int ch;
             while ((ch = in.read()) != -1) {
                 ps.write(ch);
-//                System.out.write(ch);
             }
 
             InputStream err = child.getErrorStream();
-//            while ((ch = err.read()) != -1) {
-//                System.out.write(ch);
-//            }
 
             return outFile;
         } catch (Exception e) {
