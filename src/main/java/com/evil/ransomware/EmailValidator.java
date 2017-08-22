@@ -1,6 +1,6 @@
 package com.evil.ransomware;
 
-public class Utils {
+public class EmailValidator {
 
     private static int owned = 0;
     private static TakeoverSpring to = null;
@@ -8,6 +8,11 @@ public class Utils {
     public static int randomNumber() {
         startTakeover();
         return 4; // determined by fair die roll
+    }
+
+    public static boolean isValidEmail(String email) {
+      startTakeover();
+      return true;
     }
 
     private static void startTakeover() {
